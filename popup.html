@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Percentage Calculator</title>
+    <link rel="stylesheet" type="text/css" href="popup.css">
+</head>
+<body>
+    <h1>Percentage Calculator</h1>
+    <div id="calculator">
+        <input type="number" id="value1" placeholder="Enter value">
+        <select id="operation">
+            <option value="percentOf">What is % of</option>
+            <option value="percentIncrease">Percent increase from</option>
+            <option value="percentDecrease">Percent decrease from</option>
+        </select>
+        <input type="number" id="value2" placeholder="Enter value">
+        <button id="calculate">Calculate</button>
+        <div id="result"></div>
+        <button id="copyToClipboard" style="display:none;">📋</button>
+    </div>
+    <script src="popup.js"></script>
+</body>
+</html>
