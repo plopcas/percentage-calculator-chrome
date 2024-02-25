@@ -1,24 +1,36 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <meta charset="utf-8">
+  <head>
+    <meta charset="utf-8" />
     <title>Percentage Calculator</title>
-    <link rel="stylesheet" type="text/css" href="popup.css">
-</head>
-<body>
+    <link rel="stylesheet" type="text/css" href="popup.css" />
+  </head>
+  <body>
     <h1>Percentage Calculator</h1>
     <div id="calculator">
-        <input type="number" id="value1" placeholder="Enter value">
-        <select id="operation">
-            <option value="percentOf">What is % of</option>
-            <option value="percentIncrease">Percent increase from</option>
-            <option value="percentDecrease">Percent decrease from</option>
-        </select>
-        <input type="number" id="value2" placeholder="Enter value">
-        <button id="calculate">Calculate</button>
-        <div id="result"></div>
-        <button id="copyToClipboard" style="display:none;">📋</button>
+      <select id="operation" onchange="toggleInputZ()">
+        <option value="percentOf">What is X% of Y?</option>
+        <option value="percentFrom">X is what percent of Y?</option>
+        <option value="percentChange">What is the percentage increase/decrease from X to Y?</option>
+        <option value="originalValue">Original value X before a Y% increase/decrease</option>
+        <option value="percentDifference">Percentage difference between X and Y</option>
+        <option value="compoundPercent">Value after Y% increase/decrease applied Z times to X</option>
+        <option value="reversePercentage">Calculate whole Y when X is Y% of it</option>
+      </select>
+      <input type="number" id="valueX" placeholder="Enter value for X" />
+      <input type="number" id="valueY" placeholder="Enter value for Y" />
+      <input type="number" id="valueZ" placeholder="Enter value for Z (if needed)" style="display: none" />
+      <button id="calculate" disabled>Calculate</button>
+      <div id="result">
+        <span id="resultText">Select an operation and enter values to start!</span><span id="numericResult"></span>
+        <div id="resultButton" class="tooltip">
+          <button id="copyToClipboard" style="display: none">
+            📋
+            <span class="tooltiptext">Copy to clipboard</span>
+          </button>
+        </div>
+      </div>
     </div>
     <script src="popup.js"></script>
-</body>
+  </body>
 </html>

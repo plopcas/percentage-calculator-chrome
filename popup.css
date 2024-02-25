@@ -1,29 +1,134 @@
 body {
-    width: 300px;
-    padding: 10px;
+  width: 420px;
+  font-family: "Arial", sans-serif;
+  padding: 20px;
+  background-color: #ffffff;
+  color: #333;
+}
+
+h1 {
+  color: #007bff;
 }
 
 #calculator {
-    margin-top: 20px;
+  background-color: #f0f0f0;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-input, select, button {
-    width: calc(100% - 22px); /* Adjust width to account for padding and borders */
-    margin: 5px 0;
-    padding: 10px;
-    box-sizing: border-box; /* Include padding and border in the element's total width and height */
-    display: block;
+#operation {
+  font-weight: bold; /* Make the text within the dropdown bold */
+  /* Additional styles to make the dropdown more prominent */
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+}
+
+input[type="number"],
+select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  box-sizing: border-box; /* Include padding and border in element's total width and height */
+}
+
+/* Flex container for inline display */
+.flex-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+button:disabled {
+  background-color: #cccccc;
+  color: #666666;
+  cursor: not-allowed;
 }
 
 #result {
-    margin-top: 10px;
+  margin-top: 10px;
+  padding: 17px;
+  background-color: #e6e6e6;
+  border: 1px solid #cccccc;
+  border-radius: 5px;
+  font-size: 16px; /* Maintain increased font size for better readability */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+}
+
+#numericResult {
+  color: #007bff; /* Result numeric value color set to blue */
+  font-weight: bold; /* Make the numeric result text bold */
 }
 
 #copyToClipboard {
-    cursor: pointer;
-    background: transparent;
-    border: none;
-    padding: 0;
-    font-size: 16px; /* Adjust based on your design */
+  width: 50px; /* Fixed width for the button */
+  margin-left: 10px; /* Space it out from the result text */
 }
 
+/* Tooltip container */
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+/* Tooltip text */
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+
+  /* Position the tooltip text */
+  position: absolute;
+  z-index: 1;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -60px; /* Use half of the width (120px/2 = 60px) to center the tooltip */
+
+  /* Fade in tooltip */
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+/* Tooltip arrow */
+.tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: black transparent transparent transparent;
+}
+
+/* Show the tooltip text when hovering over the tooltip container */
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
