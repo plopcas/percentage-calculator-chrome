@@ -11,6 +11,46 @@ The Percentage Calculator Chrome Extension is a simple, user-friendly tool desig
 - Find out the percent decrease from one value to another.
 - Copy the result to clipboard with a single click.
 
+## Operations
+
+This calculator provides a variety of operations to perform percentage-based calculations:
+
+1. **What is X% of Y?**
+
+   - **Calculation:** `(X / 100) * Y`
+   - **Explanation:** Calculates how much X% represents of Y by converting X percent to a decimal and multiplying by Y.
+
+2. **X is what percent of Y?**
+
+   - **Calculation:** `(X / Y) * 100`
+   - **Explanation:** Determines what percentage X is of Y by dividing X by Y and converting the result to a percentage.
+
+3. **What is the percentage increase/decrease from X to Y?**
+
+   - **Calculation:** `((Y - X) / X) * 100`
+   - **Explanation:** Calculates the percentage change (either increase or decrease) from X to Y by finding the ratio of the change relative to X and converting that ratio to a percentage.
+
+4. **Original value before a X% increase/decrease from Y**
+
+   - **Calculation:** For increases: `Y / (1 + (X / 100))`, For decreases: `Y / (1 - (X / 100))`
+   - **Explanation:** Finds the original value before an X% change resulted in Y. The calculation adjusts Y based on whether the change was an increase or a decrease.
+
+5. **Percentage difference between X and Y**
+
+   - **Calculation:** `((|X - Y|) / ((X + Y) / 2)) * 100`
+   - **Explanation:** Determines the percentage difference between X and Y by calculating the absolute difference, dividing by their average, and converting the result to a percentage.
+
+6. **Value after Y% increase/decrease applied Z times to X**
+
+   - **Calculation:** For increases: `X * (1 + Y / 100)^Z`, For decreases: `X * (1 - Y / 100)^Z`
+   - **Explanation:** Calculates the value after applying a Y% change (increase or decrease) Z times to X, using compound interest formula principles.
+
+7. **Calculate whole value when X represents Y% of it**
+   - **Calculation:** `X / (Y / 100)`
+   - **Explanation:** Finds the total value when X represents Y% of it by reversing the percentage calculation to derive the whole from a part.
+
+Use these operations to quickly solve common percentage-related questions directly within the browser.
+
 ## Installation
 
 ### From the Chrome Web Store
