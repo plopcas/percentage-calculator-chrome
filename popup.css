@@ -1,25 +1,26 @@
 body {
-  width: 420px;
+  margin: 0;
+  padding: 0;
+  width: 500px;
   font-family: "Arial", sans-serif;
-  padding: 20px;
   background-color: #ffffff;
   color: #333;
 }
 
-h1 {
-  color: #007bff;
+.header {
+  background-color:  #007bff;
+  color: white;
+  text-align: center;
+  padding: 10px;
 }
 
 #calculator {
-  background-color: #f0f0f0;
   padding: 15px;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin: 10px 0;
 }
 
 #operation {
-  font-weight: bold; /* Make the text within the dropdown bold */
-  /* Additional styles to make the dropdown more prominent */
+  font-weight: bold;
   padding: 10px;
   border-radius: 5px;
   border: 1px solid #ccc;
@@ -28,30 +29,29 @@ h1 {
 }
 
 input[type="number"],
-select {
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 10px;
-  border-radius: 5px;
-  border: 1px solid #ddd;
-  box-sizing: border-box; /* Include padding and border in element's total width and height */
-}
-
-/* Flex container for inline display */
-.flex-container {
-  display: flex;
-  align-items: center;
-  margin-bottom: 5px;
-}
-
+select,
 button {
   width: 100%;
   padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+input[type="number"],
+select {
+  background-color: #fff;
+  box-shadow: inset 0 1px 3px rgba(0,0,0,0.1);
+}
+
+button {
   background-color: #007bff;
   color: white;
   border: none;
-  border-radius: 5px;
   cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
 button:hover {
@@ -65,26 +65,30 @@ button:disabled {
 }
 
 #result {
-  margin-top: 10px;
-  padding: 17px;
-  background-color: #e6e6e6;
+  background-color: #f0f0f0;
   border: 1px solid #cccccc;
   border-radius: 5px;
-  font-size: 16px; /* Maintain increased font size for better readability */
+  padding: 15px;
+  font-size: 16px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  text-align: center;
+  margin-top: 10px;
 }
 
 #numericResult {
-  color: #007bff; /* Result numeric value color set to blue */
-  font-weight: bold; /* Make the numeric result text bold */
+  color: #007bff;
+  font-weight: bold;
 }
 
 #copyToClipboard {
-  width: 50px; /* Fixed width for the button */
-  margin-left: 10px; /* Space it out from the result text */
+  background-color: #007bff;
+  color: white;
+  border-radius: 4px;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
 /* Tooltip container */
@@ -96,7 +100,7 @@ button:disabled {
 /* Tooltip text */
 .tooltip .tooltiptext {
   visibility: hidden;
-  width: 120px;
+  width: 80px;
   background-color: black;
   color: #fff;
   text-align: center;
@@ -108,7 +112,7 @@ button:disabled {
   z-index: 1;
   bottom: 100%;
   left: 50%;
-  margin-left: -60px; /* Use half of the width (120px/2 = 60px) to center the tooltip */
+  margin-left: -40px; /* Use half of the width (120px/2 = 60px) to center the tooltip */
 
   /* Fade in tooltip */
   opacity: 0;
