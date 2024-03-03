@@ -8,7 +8,7 @@ body {
 }
 
 .header {
-  background-color:  #007bff;
+  background: linear-gradient(to right, #4caf50, #ffeb3b); /* Green to yellow gradient */
   color: white;
   text-align: center;
   padding: 10px;
@@ -47,7 +47,7 @@ select {
 }
 
 button {
-  background-color: #007bff;
+  background-color: #4CAF50;
   color: white;
   border: none;
   cursor: pointer;
@@ -55,17 +55,17 @@ button {
 }
 
 button:hover {
-  background-color: #0056b3;
+  background-color: #45a049;
 }
 
 button:disabled {
-  background-color: #cccccc;
+  background-color: #a5d6a7;
   color: #666666;
   cursor: not-allowed;
 }
 
 #result {
-  background-color: #f0f0f0;
+  background-color: #fffde7;
   border: 1px solid #cccccc;
   border-radius: 5px;
   padding: 15px;
@@ -77,12 +77,12 @@ button:disabled {
 }
 
 #numericResult {
-  color: #007bff;
+  color: #00C853;
   font-weight: bold;
 }
 
 #copyToClipboard {
-  background-color: #007bff;
+  background-color: #4CAF50;
   color: white;
   border-radius: 4px;
   padding: 10px;
@@ -101,8 +101,8 @@ button:disabled {
 .tooltip .tooltiptext {
   visibility: hidden;
   width: 80px;
-  background-color: black;
-  color: #fff;
+  background-color: #ffeb3b;
+  color: #333;
   text-align: center;
   border-radius: 6px;
   padding: 5px 0;
@@ -128,7 +128,7 @@ button:disabled {
   margin-left: -5px;
   border-width: 5px;
   border-style: solid;
-  border-color: black transparent transparent transparent;
+  border-color: #ffeb3b  transparent transparent transparent;
 }
 
 /* Show the tooltip text when hovering over the tooltip container */
